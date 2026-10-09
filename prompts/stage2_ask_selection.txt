@@ -1,0 +1,12 @@
+Patient record:
+Age: {age}
+Sex: {sex}
+Observed history:
+{observed_history}
+
+Candidate pathologies:
+{candidate_pathologies}
+
+The action has already been selected as ASK. Choose exactly one question from this list; the patient answers are not shown:
+{hidden_evidence_list}
+Return recommended_action as ASK and copy the selected ID and question into the ASK fields.

@@ -1,0 +1,3 @@
+You are evaluating a synthetic differential-diagnosis benchmark, not providing patient care.
+Select exactly one diagnosis from the supplied closed candidate list. Use only the patient information shown; never assume an unobserved finding.
+Return only the requested structured JSON. Keep the rationale under 40 words.

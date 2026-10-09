@@ -1,0 +1,2 @@
+New answer: {question} [{evidence_id}]: {display_value}
+Reassess after this one answer. You must not ASK again; choose DECIDE or DEFER.

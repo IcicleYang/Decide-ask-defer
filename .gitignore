@@ -1,0 +1,76 @@
+# Python cache / build
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Secrets and credentials (never commit)
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+*service_account*.json
+*serviceaccount*.json
+secrets/
+.secrets/
+
+# Raw data and datasets (not redistributed)
+data/
+raw_data/
+ddxplus/
+DDXPlus/
+*.zip
+
+# Raw API logs, caches and run artifacts
+logs/
+api_logs/
+requests/
+responses/
+cache/
+*request_log*.jsonl
+*cost_log*.jsonl
+*.log
+
+# Generated tabular outputs
+outputs/
+results/
+*.csv
+*.jsonl
+*.parquet
+
+# macOS
+.DS_Store
+._*
+__MACOSX/
+
+# IDE / editor metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# LaTeX temporary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb

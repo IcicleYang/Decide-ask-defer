@@ -1,0 +1,14 @@
+Patient record:
+Age: {age}
+Sex: {sex}
+Observed history:
+{observed_history}
+
+Candidate pathologies:
+{candidate_pathologies}
+
+Choose exactly one action:
+DECIDE: currently available evidence is sufficient for autonomous diagnosis.
+ASK: currently available evidence appears insufficient and additional patient information could reasonably help.
+DEFER: the case should be transferred to a clinician rather than resolved autonomously.
+If choosing ASK, set ask_evidence_id and ask_question to null. Do not select a question in this step.

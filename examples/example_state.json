@@ -1,0 +1,30 @@
+{
+  "_note": "Synthetic, fictional illustration of one evidence state. Not a DDXPlus record. Evidence IDs, questions and pathology names are invented placeholders; the real benchmark uses the full DDXPlus closed candidate list.",
+  "state_key": "EXAMPLE-0001@50",
+  "model_visible": {
+    "patient_record": {
+      "age": 45,
+      "sex": "F",
+      "observed_history": [
+        {"evidence_id": "EX_01", "question": "Do you have a fever?", "display_value": "Yes"},
+        {"evidence_id": "EX_02", "question": "Do you have a sore throat?", "display_value": "Yes"}
+      ]
+    },
+    "candidate_pathologies": [
+      "Example pathology A",
+      "Example pathology B",
+      "Example pathology C"
+    ],
+    "rendered_stage1_user_message": "Patient record:\nAge: 45\nSex: F\nObserved history:\n- Do you have a fever? [EX_01]: Yes\n- Do you have a sore throat? [EX_02]: Yes\n\nCandidate pathologies:\n- Example pathology A\n- Example pathology B\n- Example pathology C\n\nChoose exactly one action:\nDECIDE: currently available evidence is sufficient for autonomous diagnosis.\nASK: currently available evidence appears insufficient and additional patient information could reasonably help.\nDEFER: the case should be transferred to a clinician rather than resolved autonomously.\nIf choosing ASK, set ask_evidence_id and ask_question to null. Do not select a question in this step."
+  },
+  "hidden_from_model": {
+    "case_id": "EXAMPLE-0001",
+    "evidence_level": 50,
+    "gold_diagnosis": "Example pathology B",
+    "hidden_evidence_count": 2,
+    "hidden_evidence_pool": [
+      {"evidence_id": "EX_03", "question": "Have you had a cough for more than one week?", "data_type": "binary", "display_value": "No"},
+      {"evidence_id": "EX_04", "question": "Have you recently been in contact with someone who had similar symptoms?", "data_type": "binary", "display_value": "Yes"}
+    ]
+  }
+}

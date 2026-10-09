@@ -1,0 +1,31 @@
+{
+  "_note": "Synthetic, fictional illustration of the structured output format. Not a real model response.",
+  "state_key": "EXAMPLE-0001@50",
+  "stage1_response": {
+    "top_diagnosis": "Example pathology B",
+    "confidence": 0.4,
+    "information_sufficient": false,
+    "recommended_action": "ASK",
+    "ask_evidence_id": null,
+    "ask_question": null,
+    "ask_may_change_diagnosis": true,
+    "boundary_reason": "high_uncertainty",
+    "brief_rationale": "Findings fit more than one candidate; one more history item could separate them."
+  },
+  "stage2_response": {
+    "_comment": "Stage 2 runs only because Stage 1 chose ASK and the hidden pool is non-empty. The model sees hidden questions, not their answers.",
+    "top_diagnosis": "Example pathology B",
+    "confidence": 0.4,
+    "information_sufficient": false,
+    "recommended_action": "ASK",
+    "ask_evidence_id": "EX_04",
+    "ask_question": "Have you recently been in contact with someone who had similar symptoms?",
+    "ask_may_change_diagnosis": true,
+    "boundary_reason": "high_uncertainty",
+    "brief_rationale": "Exposure history best separates the remaining candidates."
+  },
+  "validation": {
+    "stage1_action_allowed": ["DECIDE", "ASK", "DEFER"],
+    "stage2_selected_id_in_hidden_pool": true
+  }
+}

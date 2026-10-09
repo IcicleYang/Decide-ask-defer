@@ -1,0 +1,52 @@
+# Public example configuration for the workshop protocol.
+# Holds no credentials, project identifiers, endpoints, or API keys.
+# Provider authentication must be configured outside this repository
+# (for example, environment variables that are never committed).
+
+protocol: v2_blinded_action_selection
+
+# Evaluation-case sampling (DDXPlus test split).
+# This seed selects the 50 evaluation cases. It is NOT a model generation
+# seed and NOT a bootstrap seed.
+case_sampling_seed: 20260824
+n_cases: 50
+evidence_levels: [0.25, 0.50, 0.75, 1.00]
+
+# Generation settings from the frozen run configurations.
+# Settings that were not set explicitly are left as provider defaults.
+temperature: 0
+models:
+  qwen:
+    provider: groq
+    model_id: qwen/qwen3.8-27b
+  gemini:
+    provider: vertex_ai
+    model_id: gemini-3.7-flash
+  gpt:
+    provider: openai
+    model_id: gpt-5.6-terra
+    max_completion_tokens: 2048
+    reasoning_effort: none
+
+# One-step ASK protocol
+max_ask_steps: 1
+random_comparator_draws_per_ask: 1   # Qwen targeted-vs-random analysis only
+
+# Offline statistics: case-clustered percentile bootstrap.
+# Each analysis has its own seed and case order (see configs/README.md).
+bootstrap:
+  n_boot: 10000
+  ci_level: 0.95
+  cluster_col: case_id
+  step5_metrics:           # compute_metrics.py, binary_baseline_analysis.py
+    seed: 20260830
+    case_order: first_appearance
+  cross_model:             # cross_model_analysis.py
+    seed: 20260831
+    case_order: sorted
+  ask_targeted_vs_random:  # ask_targeted_vs_random.py; provenance UNVERIFIED
+    seed: null
+    case_order: null
+
+multiple_comparison_correction: holm
+alpha: 0.05
