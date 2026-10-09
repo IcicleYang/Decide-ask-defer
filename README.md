@@ -3,7 +3,9 @@
 **Mingzhan Yang, Weili Wu**
 NeurIPS 2026 GenAI4Health Workshop
 
-This repository holds the reproducibility materials for the workshop paper: the prompt templates, protocol documentation, a public configuration, offline analysis code and synthetic format examples. Links to the paper are in [`paper/`](paper/README.md).
+[arXiv](https://arxiv.org/abs/2610.04542) · [OpenReview](https://openreview.net/forum?id=xKZ115jZOe) · [Code](https://github.com/IcicleYang/Decide-ask-defer)
+
+This repository holds the reproducibility materials for the workshop paper: the prompt templates, protocol documentation, a public configuration, offline analysis code and synthetic format examples. More paper links are in [`paper/`](paper/README.md).
 
 ## Overview
 
@@ -85,14 +87,17 @@ This repository covers **only** the accepted workshop paper. Materials for later
 
 ## Citation
 
-The arXiv and final workshop bibliographic metadata are not available yet. The entry below contains only verified fields. Once the preprint is posted, add the arXiv identifier (`eprint`, `archivePrefix`) and URL.
+The final workshop bibliographic metadata is not available yet, so the entry below contains only verified fields.
 
 ```bibtex
 @misc{yang2026decide,
-  title        = {Decide, Ask, or Defer: Clinical {LLMs} under Incomplete Evidence},
-  author       = {Yang, Mingzhan and Wu, Weili},
-  year         = {2026},
-  howpublished = {NeurIPS 2026 GenAI4Health Workshop}
+  title         = {Decide, Ask, or Defer: Clinical {LLMs} under Incomplete Evidence},
+  author        = {Yang, Mingzhan and Wu, Weili},
+  year          = {2026},
+  howpublished  = {NeurIPS 2026 GenAI4Health Workshop},
+  eprint        = {2610.04542},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2610.04542}
 }
 ```
 
